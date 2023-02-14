@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.2 on win32)" generated="20230130 14:09:20.454" rpa="false" schemaversion="3">
+<suite id="s1" name="meuTeste" source="C:\Users\MarcusViniciusCarval\Desktop\testeRobot\Primeiro teste\meuTeste.robot">
+<test id="s1-t1" name="Caso numero 01" line="6">
+<kw name="Minha Primeira Key Word 01" library="primeiroTesteRobot">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${/}opa,testei uma frase em robot</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230130 14:09:20.490" endtime="20230130 14:09:20.490"/>
+</kw>
+<status status="PASS" starttime="20230130 14:09:20.489" endtime="20230130 14:09:20.490"/>
+</kw>
+<status status="PASS" starttime="20230130 14:09:20.489" endtime="20230130 14:09:20.490"/>
+</test>
+<test id="s1-t2" name="Caso numero 02" line="8">
+<kw name="Minha Primeira Key Word 02" library="segundoTesteRobot">
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>8</arg>
+<arg>${8}</arg>
+<arg>opa, você erro na conta, reveja os valores colocados</arg>
+<arg>Boa,Acertou em cheio</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230130 14:09:20.492" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20230130 14:09:20.492" endtime="20230130 14:09:20.492"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Resultado do teste é ${8}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230130 14:09:20.492" endtime="20230130 14:09:20.493"/>
+</kw>
+<status status="PASS" starttime="20230130 14:09:20.491" endtime="20230130 14:09:20.493"/>
+</kw>
+<status status="PASS" starttime="20230130 14:09:20.491" endtime="20230130 14:09:20.493"/>
+</test>
+<test id="s1-t3" name="Caso numero 03" line="10">
+<kw name="Minha Primeira Key Word 03" library="primeiroTesteRobot">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Paia</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230130 14:09:20.496" endtime="20230130 14:09:20.496"/>
+</kw>
+<status status="PASS" starttime="20230130 14:09:20.495" endtime="20230130 14:09:20.496"/>
+</kw>
+<status status="PASS" starttime="20230130 14:09:20.495" endtime="20230130 14:09:20.497"/>
+</test>
+<status status="PASS" starttime="20230130 14:09:20.456" endtime="20230130 14:09:20.498"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="meuTeste">meuTeste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
