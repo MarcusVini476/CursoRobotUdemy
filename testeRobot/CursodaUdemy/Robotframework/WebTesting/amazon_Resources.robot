@@ -110,4 +110,33 @@ Verificar se o carrinho fica vazio
 
        
 
+#----------------------------area gherkin-----------------------------------------------------------------------
 
+Dado que acesso a home page do site Amazon.com.br
+    Acessar a home page do site Amazon.com.br
+E verifico se o título da página fica "${TITULO}"
+    Verificar se o título da página fica "${TITULO}"
+Quando entrar no menu "Livros"
+    Entrar no menu "Livros"
+Então verifico se aparece a frase "${FRASE}"
+    Verificar se aparece a frase "${FRASE}"
+E verifico se aparece a categoria em Lojas em Destaque "${CATEGORIAS}"
+    Verificar se aparece a categoria em Lojas em Destaque "${CATEGORIAS}"
+E clico na aba pesquisar
+    Clicar na aba pesquisar
+Quando digitar o nome de produto "${PRODUTO}" no campo de pesquisa
+    Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
+Então clico no botão de pesquisa
+    Clicar no botão de pesquisa
+E verifico se estou na página de resultado da pesquisa 
+    Verificar se estou na página de resultado da pesquisa
+E verifico se o resultado da pesquisa está listando o produto pesquisado 
+    Verificar se o resultado da pesquisa está listando o produto pesquisado 
+E adiciono o produto ao carrinho
+    Adicionar o produto ao carrinho
+E verifico se o produto foi adicionado com sucesso ao "${pagina_carrinho}"
+    Verificar se o produto foi adicionado com sucesso ao "${pagina_carrinho}"
+E Removo o produto do carrinho
+    Remover o produto do carrinho
+E Verifico se o carrinho fica vazio 
+    Verificar se o carrinho fica vazio    

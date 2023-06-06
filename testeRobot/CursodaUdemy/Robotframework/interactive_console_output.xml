@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230606 16:49:27.482" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\MarcusViniciusCarval\.vscode\extensions\robocorp.robotframework-lsp-1.10.1\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Acessar a home page do site Amazon.com.br">
+<msg timestamp="20230606 16:49:28.539" level="FAIL">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</msg>
+<status status="FAIL" starttime="20230606 16:49:28.539" endtime="20230606 16:49:28.539"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;One Piece - 101&quot; no campo de pesquisa">
+<status status="NOT RUN" starttime="20230606 16:49:28.540" endtime="20230606 16:49:28.540"/>
+</kw>
+<kw name="Clicar no botão de pesquisa">
+<status status="NOT RUN" starttime="20230606 16:49:28.542" endtime="20230606 16:49:28.542"/>
+</kw>
+<kw name="Verificar se o resultado da pesquisa está listando o produto pesquisado">
+<status status="NOT RUN" starttime="20230606 16:49:28.543" endtime="20230606 16:49:28.543"/>
+</kw>
+<kw name="Adicionar o produto ao carrinho">
+<status status="NOT RUN" starttime="20230606 16:49:28.545" endtime="20230606 16:49:28.545"/>
+</kw>
+<kw name="Verificar se o produto foi adicionado com sucesso ao &quot;Carrinho de compras da Amazon.com&quot;">
+<status status="NOT RUN" starttime="20230606 16:49:28.547" endtime="20230606 16:49:28.547"/>
+</kw>
+<kw name="Remover o produto do carrinho">
+<status status="NOT RUN" starttime="20230606 16:49:28.548" endtime="20230606 16:49:28.548"/>
+</kw>
+<kw name="Verificar se o carrinho fica vazio">
+<status status="NOT RUN" starttime="20230606 16:49:28.549" endtime="20230606 16:49:28.549"/>
+</kw>
+<status status="PASS" starttime="20230606 16:49:27.521" endtime="20230606 16:49:30.022"/>
+</kw>
+<status status="PASS" starttime="20230606 16:49:27.520" endtime="20230606 16:49:30.022"/>
+</test>
+<status status="PASS" starttime="20230606 16:49:27.486" endtime="20230606 16:49:30.023"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
