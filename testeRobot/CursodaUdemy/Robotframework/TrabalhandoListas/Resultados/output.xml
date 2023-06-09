@@ -1,119 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230607 18:11:29.329" rpa="false" schemaversion="3">
-<suite id="s1" name="Meses Dicionario" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursodaUdemy\Robotframework\TrabalhandoListas\meses_dicionario.robot">
-<test id="s1-t1" name="Cenario 01 - imprimindo os dias de cada mês" line="11">
-<kw name="imprima dias do mês de &quot;janeiro&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[0]} tem ${meses_e_dias.janeiro} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230609 18:15:51.269" rpa="false" schemaversion="3">
+<suite id="s1" name="argumentosRetornos" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursodaUdemy\Robotframework\TrabalhandoListas\argumentosRetornos.robot">
+<test id="s1-t1" name="Cenario 01- gerando um e-mail customizado" line="10">
+<kw name="criando o e-mails">
+<kw name="dados do usuario">
+<arg>Marcus</arg>
+<arg>Vinicius</arg>
+<kw name="Numerify" library="FakerLibrary">
+<var>${palavra_aleatoria}</var>
+<arg>text=#####</arg>
+<doc>Generate a string with each placeholder in ``text`` replaced according
+to the following rules:</doc>
+<msg timestamp="20230609 18:15:52.079" level="INFO">${palavra_aleatoria} = 04290</msg>
+<status status="PASS" starttime="20230609 18:15:52.079" endtime="20230609 18:15:52.079"/>
 </kw>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
+<kw name="Log" library="BuiltIn">
+<arg>message=${nome}${sobrenome}${palavra_aleatoria}"@testerobot.com"</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230609 18:15:52.080" level="INFO">MarcusVinicius04290"@testerobot.com"</msg>
+<status status="PASS" starttime="20230609 18:15:52.079" endtime="20230609 18:15:52.080"/>
 </kw>
-<kw name="imprima dias do mês de &quot;fevereiro&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[1]} tem ${meses_e_dias.fevereiro} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
+<status status="PASS" starttime="20230609 18:15:52.079" endtime="20230609 18:15:52.080"/>
 </kw>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
+<status status="PASS" starttime="20230609 18:15:52.078" endtime="20230609 18:15:52.080"/>
 </kw>
-<kw name="imprima dias do mês de &quot;março&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[2]} tem ${meses_e_dias.março} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
-</kw>
-<kw name="imprima dias do mês de &quot;abril&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[3]} tem ${meses_e_dias.abril} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
-</kw>
-<kw name="imprima dias do mês de &quot;maio&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[4]} tem ${meses_e_dias.maio} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.369"/>
-</kw>
-<kw name="imprima dias do mês de &quot;junho&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[5]} tem ${meses_e_dias.junho} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.379" endtime="20230607 18:11:29.379"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.379"/>
-</kw>
-<kw name="imprima dias do mês de &quot;julho&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[6]} tem ${meses_e_dias.julho} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.379" endtime="20230607 18:11:29.379"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.379" endtime="20230607 18:11:29.379"/>
-</kw>
-<kw name="imprima dias do mês de &quot;agosto&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[7]} tem ${meses_e_dias.agosto} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.382"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.382"/>
-</kw>
-<kw name="imprima dias do mês de &quot;setembro&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[8]} tem ${meses_e_dias.setembro} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.382"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.382"/>
-</kw>
-<kw name="imprima dias do mês de &quot;outubro&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[9]} tem ${meses_e_dias.outubro} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.382"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.382"/>
-</kw>
-<kw name="imprima dias do mês de &quot;novembro&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[10]} tem ${meses_e_dias.novembro} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.389"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.382" endtime="20230607 18:11:29.389"/>
-</kw>
-<kw name="imprima dias do mês de &quot;dezembro&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>message= ${lista[11]} tem ${meses_e_dias.dezembro} dias</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230607 18:11:29.389" endtime="20230607 18:11:29.389"/>
-</kw>
-<status status="PASS" starttime="20230607 18:11:29.389" endtime="20230607 18:11:29.389"/>
-</kw>
-<tag>Listando_dias</tag>
-<tag>Listas</tag>
-<status status="PASS" starttime="20230607 18:11:29.369" endtime="20230607 18:11:29.389"/>
+<tag>customização_de_email</tag>
+<tag>e-mail</tag>
+<status status="PASS" starttime="20230609 18:15:52.078" endtime="20230609 18:15:52.082"/>
 </test>
-<status status="PASS" starttime="20230607 18:11:29.329" endtime="20230607 18:11:29.389"/>
+<status status="PASS" starttime="20230609 18:15:51.269" endtime="20230609 18:15:52.085"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Listando_dias</stat>
-<stat pass="1" fail="0" skip="0">Listas</stat>
+<stat pass="1" fail="0" skip="0">customização_de_email</stat>
+<stat pass="1" fail="0" skip="0">e-mail</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Meses Dicionario">Meses Dicionario</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="argumentosRetornos">argumentosRetornos</stat>
 </suite>
 </statistics>
 <errors>
