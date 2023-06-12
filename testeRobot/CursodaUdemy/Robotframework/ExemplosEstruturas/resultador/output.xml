@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230612 14:54:56.534" rpa="false" schemaversion="3">
+<suite id="s1" name="UsandoLogs" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursodaUdemy\Robotframework\ExemplosEstruturas\UsandoLogs.robot">
+<test id="s1-t1" name="Caso de teste exemplo 01" line="12">
+<kw name="Usando LOG para mensagens">
+<kw name="Log" library="BuiltIn">
+<arg>Minha mensagem de LOG</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230612 14:54:57.547" level="INFO">Minha mensagem de LOG</msg>
+<status status="PASS" starttime="20230612 14:54:57.547" endtime="20230612 14:54:57.547"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${VAR}</var>
+<arg>variável qualquer</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230612 14:54:57.547" level="INFO">${VAR} = variável qualquer</msg>
+<status status="PASS" starttime="20230612 14:54:57.547" endtime="20230612 14:54:57.547"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Posso logar uma ${VAR} no meio de um log</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230612 14:54:57.547" level="INFO">Posso logar uma variável qualquer no meio de um log</msg>
+<status status="PASS" starttime="20230612 14:54:57.547" endtime="20230612 14:54:57.547"/>
+</kw>
+<status status="PASS" starttime="20230612 14:54:57.546" endtime="20230612 14:54:57.547"/>
+</kw>
+<kw name="Usando LOG Console">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Posso logar na saída do console</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230612 14:54:57.548" endtime="20230612 14:54:57.549"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>Posso logar minha lista completa @{FRUTAS}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20230612 14:54:57.549" level="INFO">Posso logar minha lista completa ['maça', 'banana', 'uva', 'abacaxi']</msg>
+<status status="PASS" starttime="20230612 14:54:57.549" endtime="20230612 14:54:57.549"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Posso logar somente itens da minha lista ${FRUTAS[0]} - ${FRUTAS[1]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230612 14:54:57.550" level="INFO">Posso logar somente itens da minha lista maça - banana</msg>
+<status status="PASS" starttime="20230612 14:54:57.549" endtime="20230612 14:54:57.550"/>
+</kw>
+<status status="PASS" starttime="20230612 14:54:57.548" endtime="20230612 14:54:57.550"/>
+</kw>
+<kw name="Usando screen shots">
+<kw name="Log" library="BuiltIn">
+<arg>Nos testes web, podemos logar Screenshot com a SeleniumLibrary</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230612 14:54:57.552" level="INFO">Nos testes web, podemos logar Screenshot com a SeleniumLibrary</msg>
+<status status="PASS" starttime="20230612 14:54:57.551" endtime="20230612 14:54:57.552"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.robotizandotestes.blogspot.com.br</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 14:54:57.552" level="INFO">Opening browser 'chrome' to base url 'http://www.robotizandotestes.blogspot.com.br'.</msg>
+<status status="PASS" starttime="20230612 14:54:57.552" endtime="20230612 14:55:06.049"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>nome_do_meuscreenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230612 14:55:06.161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="nome_do_meuscreenshot.png"&gt;&lt;img src="nome_do_meuscreenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230612 14:55:06.049" endtime="20230612 14:55:06.161"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 14:55:06.161" endtime="20230612 14:55:08.388"/>
+</kw>
+<status status="PASS" starttime="20230612 14:54:57.551" endtime="20230612 14:55:08.388"/>
+</kw>
+<status status="PASS" starttime="20230612 14:54:57.546" endtime="20230612 14:55:08.390"/>
+</test>
+<doc>Suíte de exmeplo didático para exemplificar o uso de LOGs nos testes
+Os LOGs são de grande utilidade, faça LOGs para analisar como seu teste está sendo executado nas entrelinhas
+Os LOGs te ajudam a achar falhas na automação dos seus testes
+Use LOGs sem moderação!!</doc>
+<status status="PASS" starttime="20230612 14:54:56.537" endtime="20230612 14:55:08.396"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UsandoLogs">UsandoLogs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
