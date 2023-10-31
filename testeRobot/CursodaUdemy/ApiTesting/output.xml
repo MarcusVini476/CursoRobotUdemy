@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230802 15:41:31.025" rpa="false" schemaversion="3">
+<suite id="s1" name="Api Testing Url Wave" source="c:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursodaUdemy\ApiTesting\ApiWAVE\tests\api_testing_url_wave.robot">
+<test id="s1-t1" name="Cenário 01: Requisitar analise de url usando api_testing_wave" line="6">
+<kw name="Cadastrar o usuário criado na wave" library="api_testing_wave">
+<kw name="Criar Sessão na wave" library="api_testing_wave">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>alias=Wave</arg>
+<arg>url=https://wave.webaim.org/api/request?key=${key_wave_api}&amp;reporttype=4&amp;format=xml&amp;url=${url_analisada}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230802 15:41:31.339" level="INFO">Creating Session using : alias=Wave, url=https://wave.webaim.org/api/request?key=xtQnYbVg3343&amp;reporttype=4&amp;format=xml&amp;url=https://www.uol.com.br/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230802 15:41:31.338" endtime="20230802 15:41:31.347"/>
+</kw>
+<status status="PASS" starttime="20230802 15:41:31.338" endtime="20230802 15:41:31.347"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${resposta}</var>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20230802 15:41:31.349" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+<msg timestamp="20230802 15:41:31.352" level="FAIL">TypeError: RequestsOnSessionKeywords.get_on_session() missing 2 required positional arguments: 'alias' and 'url'</msg>
+<status status="FAIL" starttime="20230802 15:41:31.347" endtime="20230802 15:41:31.365"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${resposta.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230802 15:41:31.365" endtime="20230802 15:41:31.366"/>
+</kw>
+<status status="FAIL" starttime="20230802 15:41:31.337" endtime="20230802 15:41:31.366"/>
+</kw>
+<status status="FAIL" starttime="20230802 15:41:31.336" endtime="20230802 15:41:31.367">TypeError: RequestsOnSessionKeywords.get_on_session() missing 2 required positional arguments: 'alias' and 'url'</status>
+</test>
+<status status="FAIL" starttime="20230802 15:41:31.041" endtime="20230802 15:41:31.369"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Api Testing Url Wave">Api Testing Url Wave</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230802 15:41:31.349" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+</errors>
+</robot>

@@ -1,513 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230612 14:55:56.418" rpa="false" schemaversion="3">
-<suite id="s1" name="amazon Tests" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursodaUdemy\Robotframework\WebTesting\amazon_Tests.robot">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20231030 17:41:09.790" rpa="false" schemaversion="3">
+<suite id="s1" name="amazon Tests Gherkin" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursodaUdemy\Robotframework\WebTesting\amazon_Tests_Gherkin.robot">
 <test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Livros&quot;" line="19">
 <kw name="abrir navegador" library="amazon_Resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 14:55:56.799" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
-<status status="PASS" starttime="20230612 14:55:56.799" endtime="20230612 14:55:58.842"/>
+<msg timestamp="20231030 17:41:10.204" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<msg timestamp="20231030 17:41:14.401" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231030 17:41:14.401" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</msg>
+<status status="FAIL" starttime="20231030 17:41:10.204" endtime="20231030 17:41:14.418"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230612 14:55:58.842" endtime="20230612 14:55:58.962"/>
+<status status="NOT RUN" starttime="20231030 17:41:14.418" endtime="20231030 17:41:14.418"/>
 </kw>
-<status status="PASS" starttime="20230612 14:55:56.799" endtime="20230612 14:55:58.964"/>
-</kw>
-<kw name="Acessar a home page do site Amazon.com.br" library="amazon_Resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url= ${url_amazon}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230612 14:55:58.966" level="INFO">Opening url ' https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20230612 14:55:58.965" endtime="20230612 14:56:01.098"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${menu_Livros}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:01.098" endtime="20230612 14:56:01.188"/>
-</kw>
-<status status="PASS" starttime="20230612 14:55:58.965" endtime="20230612 14:56:01.189"/>
-</kw>
-<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_Resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=${TITULO}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230612 14:56:01.198" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
-<status status="PASS" starttime="20230612 14:56:01.190" endtime="20230612 14:56:01.198"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:01.189" endtime="20230612 14:56:01.199"/>
-</kw>
-<kw name="Entrar no menu &quot;Livros&quot;" library="amazon_Resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${menu_Livros}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:01.200" level="INFO">Clicking element '//a[@href='/Livros/b/?ie=UTF8&amp;node=6740748011&amp;ref_=nav_cs_books'][contains(.,'Livros')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:01.199" endtime="20230612 14:56:02.726"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:01.199" endtime="20230612 14:56:02.726"/>
-</kw>
-<kw name="Verificar se aparece a frase &quot;Loja de Livros&quot;" library="amazon_Resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>value=5</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230612 14:56:02.727" endtime="20230612 14:56:02.729"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${H2_Livros_amazon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20230612 14:56:08.172" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230612 14:56:08.172" level="FAIL">Element '//h2[contains(.,'Loja de Livros')]' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20230612 14:56:02.729" endtime="20230612 14:56:08.188"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>locator=${H2_Livros_amazon}</arg>
-<arg>expected=${FRASE}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="NOT RUN" starttime="20230612 14:56:08.188" endtime="20230612 14:56:08.188"/>
-</kw>
-<status status="FAIL" starttime="20230612 14:56:02.727" endtime="20230612 14:56:08.188"/>
-</kw>
-<kw name="Verificar se o título da página fica &quot;Livros | Amazon.com.br&quot;" library="amazon_Resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.191" endtime="20230612 14:56:08.191"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Indicações de Livros&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.192" endtime="20230612 14:56:08.192"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros mais vendidos&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.193" endtime="20230612 14:56:08.193"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros Geek&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.194" endtime="20230612 14:56:08.194"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros exclusivos Amazon&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.196" endtime="20230612 14:56:08.196"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Hqs e mangás&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.196" endtime="20230612 14:56:08.196"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros Infantis&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.197" endtime="20230612 14:56:08.197"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros Clássicos&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.198" endtime="20230612 14:56:08.198"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros de direito&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.198" endtime="20230612 14:56:08.198"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros de Medicina&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.199" endtime="20230612 14:56:08.199"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros de Administração&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.200" endtime="20230612 14:56:08.200"/>
-</kw>
-<kw name="Verificar se aparece a categoria em Lojas em Destaque &quot;Livros para exames e concursos&quot;" library="amazon_Resources" sourcename="Verificar se aparece a categoria em Lojas em Destaque &quot;${CATEGORIAS}&quot;">
-<status status="NOT RUN" starttime="20230612 14:56:08.201" endtime="20230612 14:56:08.201"/>
+<status status="FAIL" starttime="20231030 17:41:10.204" endtime="20231030 17:41:14.418"/>
 </kw>
 <kw name="fechar navegador" library="amazon_Resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 14:56:08.204" endtime="20230612 14:56:10.593"/>
+<status status="PASS" starttime="20231030 17:41:14.418" endtime="20231030 17:41:14.418"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:08.203" endtime="20230612 14:56:10.594"/>
+<status status="PASS" starttime="20231030 17:41:14.418" endtime="20231030 17:41:14.418"/>
 </kw>
 <doc>este teste vai realizar acesso ao menu na amazon</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="FAIL" starttime="20230612 14:55:56.798" endtime="20230612 14:56:10.595">Element '//h2[contains(.,'Loja de Livros')]' not visible after 5 seconds.</status>
+<status status="FAIL" starttime="20231030 17:41:10.204" endtime="20231030 17:41:14.418">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</status>
 </test>
 <test id="s1-t2" name="Caso de teste 02 - Pesquisa de um Produto" line="39">
 <kw name="abrir navegador" library="amazon_Resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 14:56:10.600" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
-<status status="PASS" starttime="20230612 14:56:10.600" endtime="20230612 14:56:12.705"/>
+<msg timestamp="20231030 17:41:14.418" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<msg timestamp="20231030 17:41:18.325" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231030 17:41:18.325" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</msg>
+<status status="FAIL" starttime="20231030 17:41:14.418" endtime="20231030 17:41:18.325"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230612 14:56:12.706" endtime="20230612 14:56:12.829"/>
+<status status="NOT RUN" starttime="20231030 17:41:18.325" endtime="20231030 17:41:18.325"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:10.599" endtime="20230612 14:56:12.830"/>
-</kw>
-<kw name="Acessar a home page do site Amazon.com.br" library="amazon_Resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url= ${url_amazon}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230612 14:56:12.831" level="INFO">Opening url ' https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20230612 14:56:12.831" endtime="20230612 14:56:14.680"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${menu_Livros}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:14.680" endtime="20230612 14:56:14.754"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:12.830" endtime="20230612 14:56:14.754"/>
-</kw>
-<kw name="Clicar na aba pesquisar" library="amazon_Resources">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${barra_pesquisa_amazon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:14.755" endtime="20230612 14:56:14.785"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${barra_pesquisa_amazon}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:14.786" level="INFO">Clicking element '//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:14.785" endtime="20230612 14:56:14.923"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:14.755" endtime="20230612 14:56:14.923"/>
-</kw>
-<kw name="Digitar o nome de produto &quot;One Piece Vol. 7&quot; no campo de pesquisa" library="amazon_Resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${barra_pesquisa_amazon}</arg>
-<arg>text=${PRODUTO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:14.926" level="INFO">Typing text 'One Piece Vol. 7' into text field '//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:14.924" endtime="20230612 14:56:15.146"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${pesquisa_feita}</arg>
-<arg>${PRODUTO}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20230612 14:56:15.148" level="INFO">${pesquisa_feita} = One Piece Vol. 7</msg>
-<status status="PASS" starttime="20230612 14:56:15.146" endtime="20230612 14:56:15.148"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:14.924" endtime="20230612 14:56:15.149"/>
-</kw>
-<kw name="Clicar no botão de pesquisa" library="amazon_Resources">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>locator=${botão_pesquisa}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:15.151" level="INFO">Clicking button '//input[contains(@type,'submit')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:15.150" endtime="20230612 14:56:15.283"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:15.149" endtime="20230612 14:56:15.283"/>
-</kw>
-<kw name="Verificar se estou na página de resultado da pesquisa" library="amazon_Resources">
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>value=10</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230612 14:56:15.285" endtime="20230612 14:56:15.287"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>locator=//span[@class='a-color-state a-text-bold'][contains(.,'${pesquisa_feita}')]</arg>
-<arg>expected=${pesquisa_feita}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230612 14:56:15.819" level="INFO">Element '//span[@class='a-color-state a-text-bold'][contains(.,'One Piece Vol. 7')]' contains text 'One Piece Vol. 7'.</msg>
-<status status="PASS" starttime="20230612 14:56:15.287" endtime="20230612 14:56:15.819"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=${resultados_encontrados}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230612 14:56:16.094" level="INFO">Element '//span[@class='a-size-medium-plus a-color-base a-text-bold'][contains(.,'Resultados')]' is displayed.</msg>
-<status status="PASS" starttime="20230612 14:56:15.819" endtime="20230612 14:56:16.095"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:15.284" endtime="20230612 14:56:16.095"/>
-</kw>
-<kw name="Verificar se o resultado da pesquisa está listando o produto pesquisado" library="amazon_Resources">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=//img[@alt='${pesquisa_feita}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230612 14:56:16.185" level="INFO">Element '//img[@alt='One Piece Vol. 7']' is displayed.</msg>
-<status status="PASS" starttime="20230612 14:56:16.097" endtime="20230612 14:56:16.185"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:16.096" endtime="20230612 14:56:16.185"/>
+<status status="FAIL" starttime="20231030 17:41:14.418" endtime="20231030 17:41:18.325"/>
 </kw>
 <kw name="fechar navegador" library="amazon_Resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 14:56:16.186" endtime="20230612 14:56:18.477"/>
+<status status="PASS" starttime="20231030 17:41:18.325" endtime="20231030 17:41:18.325"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:16.185" endtime="20230612 14:56:18.477"/>
+<status status="PASS" starttime="20231030 17:41:18.325" endtime="20231030 17:41:18.325"/>
 </kw>
 <doc>este teste vai pesquisar um Xbox Series S na amazon</doc>
 <tag>busca_produto</tag>
 <tag>Lista_busca</tag>
-<status status="PASS" starttime="20230612 14:56:10.598" endtime="20230612 14:56:18.478"/>
+<status status="FAIL" starttime="20231030 17:41:14.418" endtime="20231030 17:41:18.325">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</status>
 </test>
 <test id="s1-t3" name="Caso de Teste 03 - Adicionar Produto no Carrinho" line="49">
 <kw name="abrir navegador" library="amazon_Resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 14:56:18.487" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
-<status status="PASS" starttime="20230612 14:56:18.485" endtime="20230612 14:56:20.507"/>
+<msg timestamp="20231030 17:41:18.340" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<msg timestamp="20231030 17:41:26.552" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231030 17:41:26.552" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</msg>
+<status status="FAIL" starttime="20231030 17:41:18.339" endtime="20231030 17:41:26.555"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230612 14:56:20.507" endtime="20230612 14:56:20.631"/>
+<status status="NOT RUN" starttime="20231030 17:41:26.555" endtime="20231030 17:41:26.555"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:18.485" endtime="20230612 14:56:20.632"/>
-</kw>
-<kw name="Acessar a home page do site Amazon.com.br" library="amazon_Resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url= ${url_amazon}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230612 14:56:20.634" level="INFO">Opening url ' https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20230612 14:56:20.633" endtime="20230612 14:56:22.682"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${menu_Livros}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:22.682" endtime="20230612 14:56:22.781"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:20.633" endtime="20230612 14:56:22.781"/>
-</kw>
-<kw name="Digitar o nome de produto &quot;One Piece - 101&quot; no campo de pesquisa" library="amazon_Resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${barra_pesquisa_amazon}</arg>
-<arg>text=${PRODUTO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:22.783" level="INFO">Typing text 'One Piece - 101' into text field '//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:22.782" endtime="20230612 14:56:23.039"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${pesquisa_feita}</arg>
-<arg>${PRODUTO}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20230612 14:56:23.040" level="INFO">${pesquisa_feita} = One Piece - 101</msg>
-<status status="PASS" starttime="20230612 14:56:23.040" endtime="20230612 14:56:23.040"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:22.782" endtime="20230612 14:56:23.040"/>
-</kw>
-<kw name="Clicar no botão de pesquisa" library="amazon_Resources">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>locator=${botão_pesquisa}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:23.043" level="INFO">Clicking button '//input[contains(@type,'submit')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:23.042" endtime="20230612 14:56:25.244"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:23.041" endtime="20230612 14:56:25.244"/>
-</kw>
-<kw name="Verificar se o resultado da pesquisa está listando o produto pesquisado" library="amazon_Resources">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=//img[@alt='${pesquisa_feita}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230612 14:56:25.278" level="INFO">Element '//img[@alt='One Piece - 101']' is displayed.</msg>
-<status status="PASS" starttime="20230612 14:56:25.245" endtime="20230612 14:56:25.278"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:25.245" endtime="20230612 14:56:25.280"/>
-</kw>
-<kw name="Adicionar o produto ao carrinho" library="amazon_Resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=//img[@alt='${pesquisa_feita}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:25.280" level="INFO">Clicking element '//img[@alt='One Piece - 101']'.</msg>
-<status status="PASS" starttime="20230612 14:56:25.280" endtime="20230612 14:56:27.808"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${add_to_cart}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:27.808" endtime="20230612 14:56:27.845"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${add_to_cart}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:27.846" level="INFO">Clicking element '//input[contains(@name,'submit.add-to-cart')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:27.845" endtime="20230612 14:56:29.792"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:25.280" endtime="20230612 14:56:29.792"/>
-</kw>
-<kw name="Verificar se o produto foi adicionado com sucesso ao &quot;Carrinho de compras da Amazon.com&quot;" library="amazon_Resources" sourcename="Verificar se o produto foi adicionado com sucesso ao &quot;${pagina_carrinho}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${subtotal_cart}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:29.793" endtime="20230612 14:56:29.826"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=${pagina_carrinho}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230612 14:56:29.835" level="INFO">Page title is 'Carrinho de compras da Amazon.com'.</msg>
-<status status="PASS" starttime="20230612 14:56:29.826" endtime="20230612 14:56:29.835"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>locator=${confirmado_no_carrinho}</arg>
-<arg>expected=Adicionado ao carrinho</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230612 14:56:29.836" level="INFO">Verifying element '//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold'][contains(.,'Adicionado ao carrinho')]' contains exact text 'Adicionado ao carrinho'.</msg>
-<status status="PASS" starttime="20230612 14:56:29.835" endtime="20230612 14:56:29.868"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:29.793" endtime="20230612 14:56:29.869"/>
+<status status="FAIL" starttime="20231030 17:41:18.339" endtime="20231030 17:41:26.555"/>
 </kw>
 <kw name="fechar navegador" library="amazon_Resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 14:56:29.869" endtime="20230612 14:56:32.257"/>
+<status status="PASS" starttime="20231030 17:41:26.556" endtime="20231030 17:41:26.556"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:29.869" endtime="20230612 14:56:32.258"/>
+<status status="PASS" starttime="20231030 17:41:26.556" endtime="20231030 17:41:26.557"/>
 </kw>
 <doc>Esse teste verifica a adição de um produto no carrinho de compras</doc>
 <tag>adicionar_carrinho</tag>
-<status status="PASS" starttime="20230612 14:56:18.483" endtime="20230612 14:56:32.259"/>
+<status status="FAIL" starttime="20231030 17:41:18.338" endtime="20231030 17:41:26.557">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</status>
 </test>
-<test id="s1-t4" name="Caso de Teste 04 - Remover Produto do Carrinho" line="59">
+<test id="s1-t4" name="Caso de Teste 04 - Remover Produto do Carrinho" line="60">
 <kw name="abrir navegador" library="amazon_Resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 14:56:32.267" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
-<status status="PASS" starttime="20230612 14:56:32.266" endtime="20230612 14:56:34.312"/>
+<msg timestamp="20231030 17:41:26.567" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<msg timestamp="20231030 17:41:31.138" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231030 17:41:31.139" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</msg>
+<status status="FAIL" starttime="20231030 17:41:26.567" endtime="20231030 17:41:31.139"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230612 14:56:34.312" endtime="20230612 14:56:34.429"/>
+<status status="NOT RUN" starttime="20231030 17:41:31.139" endtime="20231030 17:41:31.139"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:32.266" endtime="20230612 14:56:34.429"/>
-</kw>
-<kw name="Acessar a home page do site Amazon.com.br" library="amazon_Resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url= ${url_amazon}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230612 14:56:34.430" level="INFO">Opening url ' https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20230612 14:56:34.430" endtime="20230612 14:56:36.497"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${menu_Livros}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:36.497" endtime="20230612 14:56:36.572"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:34.430" endtime="20230612 14:56:36.572"/>
-</kw>
-<kw name="Digitar o nome de produto &quot;One Piece - 101&quot; no campo de pesquisa" library="amazon_Resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${barra_pesquisa_amazon}</arg>
-<arg>text=${PRODUTO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:36.573" level="INFO">Typing text 'One Piece - 101' into text field '//input[contains(@type,'text')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:36.573" endtime="20230612 14:56:36.831"/>
-</kw>
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${pesquisa_feita}</arg>
-<arg>${PRODUTO}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20230612 14:56:36.832" level="INFO">${pesquisa_feita} = One Piece - 101</msg>
-<status status="PASS" starttime="20230612 14:56:36.831" endtime="20230612 14:56:36.832"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:36.572" endtime="20230612 14:56:36.832"/>
-</kw>
-<kw name="Clicar no botão de pesquisa" library="amazon_Resources">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>locator=${botão_pesquisa}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:36.834" level="INFO">Clicking button '//input[contains(@type,'submit')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:36.833" endtime="20230612 14:56:38.585"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:36.833" endtime="20230612 14:56:38.585"/>
-</kw>
-<kw name="Verificar se o resultado da pesquisa está listando o produto pesquisado" library="amazon_Resources">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=//img[@alt='${pesquisa_feita}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230612 14:56:38.618" level="INFO">Element '//img[@alt='One Piece - 101']' is displayed.</msg>
-<status status="PASS" starttime="20230612 14:56:38.586" endtime="20230612 14:56:38.618"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:38.586" endtime="20230612 14:56:38.618"/>
-</kw>
-<kw name="Adicionar o produto ao carrinho" library="amazon_Resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=//img[@alt='${pesquisa_feita}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:38.619" level="INFO">Clicking element '//img[@alt='One Piece - 101']'.</msg>
-<status status="PASS" starttime="20230612 14:56:38.619" endtime="20230612 14:56:41.369"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${add_to_cart}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:41.369" endtime="20230612 14:56:41.409"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${add_to_cart}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:41.410" level="INFO">Clicking element '//input[contains(@name,'submit.add-to-cart')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:41.409" endtime="20230612 14:56:42.535"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:38.619" endtime="20230612 14:56:42.535"/>
-</kw>
-<kw name="Verificar se o produto foi adicionado com sucesso ao &quot;Carrinho de compras da Amazon.com&quot;" library="amazon_Resources" sourcename="Verificar se o produto foi adicionado com sucesso ao &quot;${pagina_carrinho}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${subtotal_cart}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:42.537" endtime="20230612 14:56:42.656"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=${pagina_carrinho}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230612 14:56:42.675" level="INFO">Page title is 'Carrinho de compras da Amazon.com'.</msg>
-<status status="PASS" starttime="20230612 14:56:42.656" endtime="20230612 14:56:42.675"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>locator=${confirmado_no_carrinho}</arg>
-<arg>expected=Adicionado ao carrinho</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230612 14:56:42.676" level="INFO">Verifying element '//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold'][contains(.,'Adicionado ao carrinho')]' contains exact text 'Adicionado ao carrinho'.</msg>
-<status status="PASS" starttime="20230612 14:56:42.675" endtime="20230612 14:56:42.743"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:42.536" endtime="20230612 14:56:42.743"/>
-</kw>
-<kw name="Remover o produto do carrinho" library="amazon_Resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${Ir_para_o_carrinho}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:42.744" level="INFO">Clicking element '//a[contains(@data-csa-c-type,'button')]'.</msg>
-<status status="PASS" starttime="20230612 14:56:42.744" endtime="20230612 14:56:44.671"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${dentro_do_carrinho}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:44.671" endtime="20230612 14:56:44.754"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${excluir_do_carrinho}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230612 14:56:44.755" level="INFO">Clicking element '//input[@value='Excluir']'.</msg>
-<status status="PASS" starttime="20230612 14:56:44.754" endtime="20230612 14:56:44.868"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:42.743" endtime="20230612 14:56:44.868"/>
-</kw>
-<kw name="Verificar se o carrinho fica vazio" library="amazon_Resources">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${Titulo_carrinho_vazio}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230612 14:56:44.869" endtime="20230612 14:56:45.194"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>locator=(//span[contains(@class,'a-size-base')])[5]</arg>
-<arg>expected=foi removido de Carrinho de compras.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230612 14:56:45.222" level="INFO">Element '(//span[contains(@class,'a-size-base')])[5]' contains text 'foi removido de Carrinho de compras.'.</msg>
-<status status="PASS" starttime="20230612 14:56:45.194" endtime="20230612 14:56:45.222"/>
-</kw>
-<status status="PASS" starttime="20230612 14:56:44.869" endtime="20230612 14:56:45.222"/>
+<status status="FAIL" starttime="20231030 17:41:26.567" endtime="20231030 17:41:31.139"/>
 </kw>
 <kw name="fechar navegador" library="amazon_Resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 14:56:45.222" endtime="20230612 14:56:47.649"/>
+<status status="PASS" starttime="20231030 17:41:31.139" endtime="20231030 17:41:31.139"/>
 </kw>
-<status status="PASS" starttime="20230612 14:56:45.222" endtime="20230612 14:56:47.649"/>
+<status status="PASS" starttime="20231030 17:41:31.139" endtime="20231030 17:41:31.139"/>
 </kw>
 <doc>Esse teste verifica a remoção de um produto no carrinho de compras</doc>
 <tag>remover_carrinho</tag>
-<status status="PASS" starttime="20230612 14:56:32.265" endtime="20230612 14:56:47.649"/>
+<status status="FAIL" starttime="20231030 17:41:26.566" endtime="20231030 17:41:31.139">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 118.0.5993.118 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x003CA813+48355]
+	(No symbol) [0x0035C4B1]
+	(No symbol) [0x00265358]
+	(No symbol) [0x002861AC]
+	(No symbol) [0x00281EF3]
+	(No symbol) [0x00280579]
+	(No symbol) [0x002B0C55]
+	(No symbol) [0x002B093C]
+	(No symbol) [0x002AA536]
+	(No symbol) [0x002882DC]
+	(No symbol) [0x002893DD]
+	GetHandleVerifier [0x0062AABD+2539405]
+	GetHandleVerifier [0x0066A78F+2800735]
+	GetHandleVerifier [0x0066456C+2775612]
+	GetHandleVerifier [0x004551E0+616112]
+	(No symbol) [0x00365F8C]
+	(No symbol) [0x00362328]
+	(No symbol) [0x0036240B]
+	(No symbol) [0x00354FF7]
+	BaseThreadInitThunk [0x76077BA9+25]
+	RtlInitializeExceptionChain [0x76F9BD3B+107]
+	RtlClearBits [0x76F9BCBF+191]
+</status>
 </test>
 <doc>Aqui sera o inicio dos testes, entrada e saida dos navegadores</doc>
-<status status="FAIL" starttime="20230612 14:55:56.421" endtime="20230612 14:56:47.649"/>
+<status status="FAIL" starttime="20231030 17:41:09.790" endtime="20231030 17:41:31.139"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">adicionar_carrinho</stat>
-<stat pass="1" fail="0" skip="0">busca_produto</stat>
+<stat pass="0" fail="1" skip="0">adicionar_carrinho</stat>
+<stat pass="0" fail="1" skip="0">busca_produto</stat>
 <stat pass="0" fail="1" skip="0">categorias</stat>
-<stat pass="1" fail="0" skip="0">Lista_busca</stat>
+<stat pass="0" fail="1" skip="0">Lista_busca</stat>
 <stat pass="0" fail="1" skip="0">menus</stat>
-<stat pass="1" fail="0" skip="0">remover_carrinho</stat>
+<stat pass="0" fail="1" skip="0">remover_carrinho</stat>
 </tag>
 <suite>
-<stat pass="3" fail="1" skip="0" id="s1" name="amazon Tests">amazon Tests</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="amazon Tests Gherkin">amazon Tests Gherkin</stat>
 </suite>
 </statistics>
 <errors>

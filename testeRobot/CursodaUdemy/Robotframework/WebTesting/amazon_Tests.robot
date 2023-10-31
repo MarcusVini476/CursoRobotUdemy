@@ -66,5 +66,12 @@ Caso de Teste 04 - Remover Produto do Carrinho
     Adicionar o produto ao carrinho
     Verificar se o produto foi adicionado com sucesso ao "Carrinho de compras da Amazon.com"
     Remover o produto do carrinho
-    Verificar se o carrinho fica vazio     
+    Verificar se o carrinho fica vazio    
+
+
+Caso de Teste 05 - Testando o chromedriver
+    [Documentation]    Esse teste verifica se o chromedriver ta funcionando, criado so pra não precisar rodar 
+    ...    todos os testes ou apagar linha
+    [Tags]             testeteste
+    Acessar a home page do site Amazon.com.br
 
