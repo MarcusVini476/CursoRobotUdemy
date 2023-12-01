@@ -1,4 +1,7 @@
 *** Settings ***
+Library           SeleniumLibrary
+Library           webdrivermanager
+Library           Process
 documentation     Aqui sera o inicio dos testes, entrada e saida dos navegadores
 
 Resource    amazon_Resources.robot
@@ -14,6 +17,15 @@ Test Teardown   fechar navegador
 
 *** Test Cases ***
 # usar  robot -d resultados amazon_Tests.robot   para rodar os testes
+Setup Webdriver
+    ${browser} =    Set Variable    chrome
+    ${version} =    Set Variable    latest
+
+    ${cmd} =    Evaluate    f'webdrivermanager {${browser} --version ${version} --linkpath .}'    modules=Process
+    ${output} =    Run Process    ${cmd}    shell=True    capture_output=True    text=True
+    Log    ${output.stdout}
+    Log    ${output.stderr}
+
 
 
 Caso de teste 01 - Acesso ao menu "Livros"

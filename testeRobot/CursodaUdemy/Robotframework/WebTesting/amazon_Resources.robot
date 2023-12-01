@@ -1,8 +1,11 @@
 *** Settings ***
+Library           SeleniumLibrary
+Library           webdrivermanager
 Library     SeleniumLibrary
 
 
 *** Variables ***
+
 
 ${url_amazon}                      https://www.amazon.com.br/
 ${menu_Livros}                     //a[@href='/Livros/b/?ie=UTF8&node=6740748011&ref_=nav_cs_books'][contains(.,'Livros')]

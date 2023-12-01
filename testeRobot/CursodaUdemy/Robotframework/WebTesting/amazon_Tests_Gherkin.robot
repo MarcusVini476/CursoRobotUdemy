@@ -1,4 +1,6 @@
 *** Settings ***
+Library           SeleniumLibrary
+Library           webdrivermanager
 documentation     Aqui sera o inicio dos testes, entrada e saida dos navegadores
 
 Resource    amazon_Resources.robot
