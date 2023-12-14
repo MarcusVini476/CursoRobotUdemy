@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.2 on win32)" generated="20230130 14:09:20.454" rpa="false" schemaversion="3">
-<suite id="s1" name="meuTeste" source="C:\Users\MarcusViniciusCarval\Desktop\testeRobot\Primeiro teste\meuTeste.robot">
+<robot generator="Robot 6.1.1 (Python 3.11.1 on win32)" generated="20231213 10:13:05.064" rpa="false" schemaversion="4">
+<suite id="s1" name="meuTeste" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\Primeiro teste\ResourcesObject\meuTeste.robot">
 <test id="s1-t1" name="Caso numero 01" line="6">
 <kw name="Minha Primeira Key Word 01" library="primeiroTesteRobot">
 <kw name="Log To Console" library="BuiltIn">
 <arg>${/}opa,testei uma frase em robot</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230130 14:09:20.490" endtime="20230130 14:09:20.490"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
-<status status="PASS" starttime="20230130 14:09:20.489" endtime="20230130 14:09:20.490"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
-<status status="PASS" starttime="20230130 14:09:20.489" endtime="20230130 14:09:20.490"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </test>
 <test id="s1-t2" name="Caso numero 02" line="8">
 <kw name="Minha Primeira Key Word 02" library="segundoTesteRobot">
@@ -20,32 +20,32 @@
 <arg>opa, você erro na conta, reveja os valores colocados</arg>
 <arg>Boa,Acertou em cheio</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<msg timestamp="20230130 14:09:20.492" level="INFO">Argument types are:
+<msg timestamp="20231213 10:13:05.111" level="INFO">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20230130 14:09:20.492" endtime="20230130 14:09:20.492"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Resultado do teste é ${8}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230130 14:09:20.492" endtime="20230130 14:09:20.493"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
-<status status="PASS" starttime="20230130 14:09:20.491" endtime="20230130 14:09:20.493"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
-<status status="PASS" starttime="20230130 14:09:20.491" endtime="20230130 14:09:20.493"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </test>
 <test id="s1-t3" name="Caso numero 03" line="10">
 <kw name="Minha Primeira Key Word 03" library="primeiroTesteRobot">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Paia</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230130 14:09:20.496" endtime="20230130 14:09:20.496"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
-<status status="PASS" starttime="20230130 14:09:20.495" endtime="20230130 14:09:20.496"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </kw>
-<status status="PASS" starttime="20230130 14:09:20.495" endtime="20230130 14:09:20.497"/>
+<status status="PASS" starttime="20231213 10:13:05.111" endtime="20231213 10:13:05.111"/>
 </test>
-<status status="PASS" starttime="20230130 14:09:20.456" endtime="20230130 14:09:20.498"/>
+<status status="PASS" starttime="20231213 10:13:05.064" endtime="20231213 10:13:05.111"/>
 </suite>
 <statistics>
 <total>

@@ -1,6 +1,6 @@
 *** Settings ***
-Resource  primeiroTesteRobot.robot
-Resource  segundoTesteRobot.robot
+Resource  primeiroTesteRobot.resource
+Resource  segundoTesteRobot.resource
 
 *** Test Cases ***
 Caso numero 01

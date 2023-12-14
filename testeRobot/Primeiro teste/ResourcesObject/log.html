@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 6.0.2 (Python 3.10.2 on win32)" name="Generator">
+<meta content="Robot Framework 6.1.1 (Python 3.11.1 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -560,6 +560,9 @@ function toggleSuite(suiteId) {
 }
 function toggleTest(testId) {
     toggleElement(testId, ['keyword']);
+    var test = window.testdata.findLoaded(testId);
+    if (test.status == "FAIL" || test.status == "SKIP")
+        expandFailed(test);
 }
 function toggleKeyword(kwId) {
     toggleElement(kwId, ['keyword']);
@@ -623,7 +626,7 @@ function loadAndExpandElementIds(ids) {
     }
 }
 function expandFailed(element) {
-    if (element.status == "FAIL") {
+    if (element.status == "FAIL" || (element.type == "test" && element.status == "SKIP")) {
         window.elementsToExpand = [element];
         window.expandDecider = function (e) {
             return e.status == "FAIL";
@@ -1355,7 +1358,7 @@ window.testdata = function () {
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
     var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK'];
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1803,13 +1806,13 @@ function stopPropagation(event) {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,42],[],[[4,0,0,[],[1,33,1],[[0,5,6,0,0,0,0,0,[1,33,1],[[0,7,8,0,9,10,0,0,[1,34,0],[]]]]]],[11,0,0,[],[1,35,2],[[0,12,13,0,0,0,0,0,[1,35,2],[[0,14,8,0,15,16,0,0,[1,36,0],[[36,2,17]]],[0,7,8,0,9,18,0,0,[1,36,1],[]]]]]],[19,0,0,[],[1,39,2],[[0,20,6,0,0,0,0,0,[1,39,1],[[0,7,8,0,9,21,0,0,[1,40,0],[]]]]]]],[],[3,3,0,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,47],[],[[4,0,0,[],[1,47,0],[[0,5,6,0,0,0,0,0,[1,47,0],[[0,7,8,0,9,10,0,0,[1,47,0],[]]]]]],[11,0,0,[],[1,47,0],[[0,12,13,0,0,0,0,0,[1,47,0],[[0,14,8,0,15,16,0,0,[1,47,0],[[47,2,17]]],[0,7,8,0,9,18,0,0,[1,47,0],[]]]]]],[19,0,0,[],[1,47,0],[[0,20,6,0,0,0,0,0,[1,47,0],[[0,7,8,0,9,21,0,0,[1,47,0],[]]]]]]],[],[3,3,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*meuTeste","*C:\\Users\\MarcusViniciusCarval\\Desktop\\testeRobot\\Primeiro teste\\meuTeste.robot","*meuTeste.robot","*Caso numero 01","*Minha Primeira Key Word 01","*primeiroTesteRobot","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*${/}opa,testei uma frase em robot","*Caso numero 02","*Minha Primeira Key Word 02","*segundoTesteRobot","*Should Be Equal As Integers","*<p>Fails if objects are unequal after converting them to integers.\x3c/p>","*8, ${8}, opa, você erro na conta, reveja os valores colocados, Boa,Acertou em cheio","*Argument types are:\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;","*Resultado do teste é ${8}","*Caso numero 03","*Minha Primeira Key Word 03","*Paia"]);
+window.output["strings"] = window.output["strings"].concat(["*","*meuTeste","*C:\\Users\\MarcusViniciusCarval\\Desktop\\pdirobot\\testeRobot\\Primeiro teste\\ResourcesObject\\meuTeste.robot","*meuTeste.robot","*Caso numero 01","*Minha Primeira Key Word 01","*primeiroTesteRobot","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*${/}opa,testei uma frase em robot","*Caso numero 02","*Minha Primeira Key Word 02","*segundoTesteRobot","*Should Be Equal As Integers","*<p>Fails if objects are unequal after converting them to integers.\x3c/p>","*8, ${8}, opa, você erro na conta, reveja os valores colocados, Boa,Acertou em cheio","*Argument types are:\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;","*Resultado do teste é ${8}","*Caso numero 03","*Minha Primeira Key Word 03","*Paia"]);
 </script>
 <script type="text/javascript">
 window.output["stats"] = [[{"elapsed":"00:00:00","fail":0,"label":"All Tests","pass":3,"skip":0}],[],[{"elapsed":"00:00:00","fail":0,"id":"s1","label":"meuTeste","name":"meuTeste","pass":3,"skip":0}]];
@@ -1818,10 +1821,10 @@ window.output["stats"] = [[{"elapsed":"00:00:00","fail":0,"label":"All Tests","p
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1675098560456;
+window.output["baseMillis"] = 1702473185064;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 50;
+window.output["generated"] = 62;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -1928,8 +1931,8 @@ function makeElementVisible(id) {
         util.map(ids, expandElementWithId);
         if (ids.length) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
-            window.location.hash = '';
             window.location.hash = id;
+            document.getElementById(id).scrollIntoView();
             highlightLinkTarget();
         }
     });
