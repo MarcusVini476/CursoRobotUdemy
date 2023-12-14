@@ -1,0 +1,20 @@
+## Vamos criar o container com o Zalenium
+docker run --rm -ti -d --name zalenium -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v "C:\RobotFramework\AdvancedProjects\Zalenium\results\videos":/home/seluser/videos --privileged dosel/zalenium start
+
+## Atualizar sua keyword que abrirá o navegador
+Na keyword Open Browser passar a URL do Zalenium (http://IP_DA_MAQUINA_DO_ZALENIUM:4444/wd/hub) no parâmetro remote_url
+
+Exemplo:
+Abrir navegador
+    Open Browser   about:blank   ${BROWSER}   remote_url=http://172.23.138.1:4444/wd/hub
+
+## Vamos rodar nosso teste dentro do nosso container, mas o browser será utilizado remotamente (via Zalenium)
+docker run --rm --name execucao_robot -v "C:\RobotFramework\AdvancedProjects\Zalenium\suites":/opt/robotframework/tests -v "C:\RobotFramework\AdvancedProjects\Zalenium\results":/opt/robotframework/results run_robot:latest robot -d /opt/robotframework/results /opt/robotframework/tests
+
+## Assistindo os seus testes no Zalenium
+http://IP_DA_MAQUINA_DO_ZALENIUM:4444/grid/admin/live
+
+Exemplo: http://localhost:4444/grid/admin/live
+
+## Dashboard
+http://IP_DA_MAQUINA_DO_ZALENIUM:4444/dashboard/

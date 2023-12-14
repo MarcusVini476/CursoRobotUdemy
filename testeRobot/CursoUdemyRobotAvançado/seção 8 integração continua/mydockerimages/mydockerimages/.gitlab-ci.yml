@@ -1,0 +1,20 @@
+variables:
+    IMAGE_NAME: "COLOQUE A URL QUE O REGISTRY TE MOSTROU"
+
+services:
+  - docker:dind
+
+stages:
+  - build_images
+
+docker_build:
+  image: docker:latest
+  stage: build_images
+  tags:
+    - docker
+  script:
+    - docker login -u $GIT_REGISTRY_USER -p $GIT_REGISTRY_PWD registry.gitlab.com
+    - docker build -t $IMAGE_NAME:latest .
+    - docker push $IMAGE_NAME:latest
+  only:
+    - master
