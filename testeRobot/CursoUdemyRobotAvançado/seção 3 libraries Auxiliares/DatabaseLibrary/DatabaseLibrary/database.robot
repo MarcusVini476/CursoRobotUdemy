@@ -32,10 +32,15 @@ Exemplo 04: Limpando Tabelas
     Limpar Tabela    account
     Executar script via STRING no Banco de Dados     DROP table account
 
+
+Exemplo 05: inserindo meu usuario aluno
+    Executar script via STRING no Banco de Dados        INSERT INTO public.account(user_id, username, password, email) VALUES (3, 'Marcus Vinicius', 'robot988', 'robotizando3@robot.com')
+    Confere se "Marcus Vinicius" foi inserido com sucesso
+
 *** Keywords ***
 Conectar no Banco de Dados
     ## PostgreSQL
-    Connect To Database   dbapiModuleName=psycopg2   dbName=robot   dbUsername=postgres   dbPassword=postgres   dbHost=localhost   dbPort=5432
+    Connect To Database   dbapiModuleName=psycopg2   dbName=robot   dbUsername=postgres   dbPassword=tenas334#7   dbHost=localhost   dbPort=5432
     ## SQLite 3
       # Connect To Database Using Custom Params   dbapiModuleName=sqlite3    db_connect_string=database="./${DBName}.db", isolation_level=None
     ## MySQL

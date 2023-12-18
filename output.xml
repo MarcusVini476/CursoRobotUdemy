@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.1 on win32)" generated="20231218 16:20:49.069" rpa="false" schemaversion="4">
+<suite id="s1" name="Tarefa" source="c:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\CursoUdemyRobotAvançado\seção 4 libraries customizadas\TarefaMyLibrarie\tarefa.robot">
+<test id="s1-t1" name="Caso 02: Insira qualquer letra no conteudo e seja bem-vindo" line="17">
+<kw name="Inserindo ${Qualquer_palavra}" sourcename="Inserindo ${Qualquer_palavra}">
+<kw name="Gerar Oi Comum" library="ChamaPrint">
+<arg>${Qualquer_palavra}</arg>
+<msg timestamp="20231218 16:20:49.137" level="INFO">Olá robotizadores, tudo bem gabriel?, como está?</msg>
+<status status="PASS" starttime="20231218 16:20:49.136" endtime="20231218 16:20:49.142"/>
+</kw>
+<status status="PASS" starttime="20231218 16:20:49.135" endtime="20231218 16:20:49.142"/>
+</kw>
+<status status="PASS" starttime="20231218 16:20:49.133" endtime="20231218 16:20:49.143"/>
+</test>
+<status status="PASS" starttime="20231218 16:20:49.079" endtime="20231218 16:20:49.144"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tarefa">Tarefa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
