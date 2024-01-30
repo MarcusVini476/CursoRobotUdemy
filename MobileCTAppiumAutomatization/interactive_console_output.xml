@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.1 on win32)" generated="20240118 15:31:55.109" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\MarcusViniciusCarval\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Dado que estou na página inicial do app">
+<msg timestamp="20240118 15:31:55.983" level="FAIL">No keyword with name 'Dado que estou na página inicial do app' found.</msg>
+<status status="FAIL" starttime="20240118 15:31:55.983" endtime="20240118 15:31:55.983"/>
+</kw>
+<kw name="Então valido que o texto &quot;Opção bem escondida&quot; pertecence a essa página inicial">
+<status status="NOT RUN" starttime="20240118 15:31:55.984" endtime="20240118 15:31:55.984"/>
+</kw>
+<status status="PASS" starttime="20240118 15:31:55.145" endtime="20240118 15:31:57.313"/>
+</kw>
+<status status="PASS" starttime="20240118 15:31:55.145" endtime="20240118 15:31:57.313"/>
+</test>
+<status status="PASS" starttime="20240118 15:31:55.109" endtime="20240118 15:31:57.314"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

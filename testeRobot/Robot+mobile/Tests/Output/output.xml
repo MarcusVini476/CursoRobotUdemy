@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.1 on win32)" generated="20240102 11:15:50.051" rpa="false" schemaversion="4">
+<suite id="s1" name="Open application" source="C:\Users\MarcusViniciusCarval\Desktop\pdirobot\testeRobot\Robot+mobile\Tests\Open_application.robot">
+<test id="s1-t1" name="Open_Application" line="15">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=com.google.android.keep</arg>
+<arg>appActivity=com.google.android.keep.activities.BrowseActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20240102 11:15:52.667" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20240102 11:15:52.667" endtime="20240102 11:15:52.681"/>
+</kw>
+<msg timestamp="20240102 11:15:52.682" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20240102 11:15:52.687" level="FAIL">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</msg>
+<status status="FAIL" starttime="20240102 11:15:50.541" endtime="20240102 11:15:52.689"/>
+</kw>
+<status status="FAIL" starttime="20240102 11:15:50.540" endtime="20240102 11:15:52.690">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</test>
+<status status="FAIL" starttime="20240102 11:15:50.054" endtime="20240102 11:15:52.693"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Open application">Open application</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240102 11:15:52.682" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.1 on win32)" generated="20240104 10:54:22.789" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\MarcusViniciusCarval\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Dado que estou na página inicial do app">
+<msg timestamp="20240104 10:54:23.622" level="FAIL">No keyword with name 'Dado que estou na página inicial do app' found.</msg>
+<status status="FAIL" starttime="20240104 10:54:23.622" endtime="20240104 10:54:23.622"/>
+</kw>
+<kw name="E valido que o primeiro componente da página é o botão &quot;About...&quot;">
+<status status="NOT RUN" starttime="20240104 10:54:23.624" endtime="20240104 10:54:23.624"/>
+</kw>
+<kw name="Então valido que o texto &quot;Formulário&quot; pertecence a essa página inicial e ao componente Formulário">
+<status status="NOT RUN" starttime="20240104 10:54:23.625" endtime="20240104 10:54:23.625"/>
+</kw>
+<status status="PASS" starttime="20240104 10:54:22.836" endtime="20240104 10:54:26.439"/>
+</kw>
+<status status="PASS" starttime="20240104 10:54:22.836" endtime="20240104 10:54:26.439"/>
+</test>
+<status status="PASS" starttime="20240104 10:54:22.789" endtime="20240104 10:54:26.441"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
