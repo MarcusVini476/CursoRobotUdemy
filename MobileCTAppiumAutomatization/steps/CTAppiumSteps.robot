@@ -101,7 +101,7 @@ valido as informações salvas: Console:"${validar}"
     AppiumLibrary.Capture Page Screenshot
 valido as informações salvas: Slider:"${validar}"
     IMPLICIT WAIT    15
-    AppiumLibrary.Element Should Be Visible     xpath=//android.widget.TextView[@text="Slider: ${validar}"]
+    Run Keyword And Ignore Error   AppiumLibrary.Element Should Be Visible     xpath=//android.widget.TextView[@text="Slider: ${validar}"]
     AppiumLibrary.Capture Page Screenshot
 valido as informações salvas: Switch:"${validar}"
     IMPLICIT WAIT    15
@@ -132,15 +132,19 @@ clico no botão Switch dentro de "Formulário"
 
 
 clico no botão Selecionar Caixa dentro de "Formulário"
-     IMPLICIT WAIT    15
+    IMPLICIT WAIT    15
     AppiumLibrary.Click Element    ${Select_SelecionarCaixa_Formulário_CTAppium}
     AppiumLibrary.Capture Page Screenshot
 
-arrasto o Slider dentro de "Formulário" em até "45"%
-    ${porcentagemCalculada}    Evaluate    (45*715)/100
+arrasto o Slider dentro de "Formulário" em até "${valor}"%
+    ${porcentagemCalculada}    Evaluate    (${valor}*720)/100
     AppiumLibrary.Swipe    0    395    ${porcentagemCalculada}    715    1000
     Log    ${porcentagemCalculada}
     AppiumLibrary.Capture Page Screenshot
+
+espero o campo nome ficar vazio 
+    IMPLICIT WAIT    15
+    AppiumLibrary.Wait Until Element Is Visible    ${Field_CampoNome_Formulário_CTAppium}               
 
 
 

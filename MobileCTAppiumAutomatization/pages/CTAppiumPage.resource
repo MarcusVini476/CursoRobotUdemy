@@ -46,7 +46,7 @@ ${TXT_CampoData_Formulário_CTAppium}                 xpath=//android.widget.Tex
 ${TXT_CampoHorario_Formulário_CTAppium}              xpath=//android.widget.TextView[@text="01/01/2000"]
 ${BTN_Salvar_Formulário_CTAppium}                    xpath=//android.widget.Button[@content-desc="save"]   
 ${BTN_SalvarDemorado_Formulário_CTAppium}            xpath=(//android.widget.Button[@resource-id="idButtonTest"])[2]
-${BTN_Limpar_Formulário_CTAppium}                    xpath=(//android.widget.Button[@resource-id="idButtonTest"])[2]
+${BTN_Limpar_Formulário_CTAppium}                    xpath=(//android.widget.Button[@resource-id="idButtonTest"])[3]
 ${Escolhe_PS4_Formulário_CTAppium}                   xpath=//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="PS4"]
 ${Escolhe_XBox_Formulário_CTAppium}                  xpath=//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="XBox One"]
 ${Escolhe_Nintendo_Formulário_CTAppium}              xpath=//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="Nintendo Switch"]

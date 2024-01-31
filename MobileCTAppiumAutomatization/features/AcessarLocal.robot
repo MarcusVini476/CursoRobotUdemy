@@ -121,27 +121,58 @@ Cenário 0016: Validar o nome, escolher o produto PS4, verificar a caixa desmarc
     E valido as informações salvas: Data:"01/01/2000"
     E valido as informações salvas: Hora:"09:00"
 
-Cenário 0017: Validar o nome, escolher o produto Nintendo, verificar a caixa marcada, switch desativado, slider em 45% e Clicar em salvar demorado o produto
+Cenário 0017: Validar o nome, escolher o produto Nintendo, verificar a caixa marcada, switch desativado, slider em 42% e Clicar em salvar demorado o produto
     [Tags]    CT0017   ValidarBotoes   Formulario
     Dado que estou na página inicial do app
     E clico no botão "Formulário" do Menu
     E dentro do campo Nome na página de "Formulário" devo inserir o nome "Ciclano de tal"
     E clico no botão "BotaoCaixaConsole" dentro de "Formulário"
     E escolho a opção "Nintendo" dentro de "Formulário"
-    E arrasto o Slider dentro de "Formulário" em até "45"%
+    E arrasto o Slider dentro de "Formulário" em até "42"%
     E clico no botão Switch dentro de "Formulário"
     E clico no botão Selecionar Caixa dentro de "Formulário"
     Quando clico no botão "SalvarDemorado" dentro de "Formulário"
     Então devo aguardar mensagem de carregando dentro de "Formulário"
     E valido as informações salvas: Nome:"Ciclano de tal"
     E valido as informações salvas: Console:"switch"
-    E valido as informações salvas: Slider:"45"
+    E valido as informações salvas: Slider:"42"
     E valido as informações salvas: Switch:"Off"
-    E valido as informações salvas: Checkbox:"Habilitado"
+    E valido as informações salvas: Checkbox:"Marcado"
     E valido as informações salvas: Data:"01/01/2000"
     E valido as informações salvas: Hora:"09:00"
 
+Cenário 0018: Validar o nome, escolher o produto XBox, verificar a caixa desmarcada, switch ativado, slider em 98% e Clicar em limpar, repetir o processo e salvar o produto
+    [Tags]    CT0018   ValidarBotoes   Formulario
+    Dado que estou na página inicial do app
+    E clico no botão "Formulário" do Menu
+    E dentro do campo Nome na página de "Formulário" devo inserir o nome "Beltrano de tal"
+    E clico no botão "BotaoCaixaConsole" dentro de "Formulário"
+    E escolho a opção "XBox" dentro de "Formulário"
+    E arrasto o Slider dentro de "Formulário" em até "98"%
+    E clico no botão "Salvar" dentro de "Formulário"
+    E valido as informações salvas: Nome:"Beltrano de tal"
+    E valido as informações salvas: Console:"xone"
+    E valido as informações salvas: Slider:"98"
+    E valido as informações salvas: Switch:"On"
+    E valido as informações salvas: Checkbox:"Desabilitado"
+    E valido as informações salvas: Data:"01/01/2000"
+    E valido as informações salvas: Hora:"09:00"
+    Quando clico no botão "Limpar" dentro de "Formulário"
+    E espero o campo nome ficar vazio 
+    E dentro do campo Nome na página de "Formulário" devo inserir o nome "limpou"
+    E clico no botão "BotaoCaixaConsole" dentro de "Formulário"
+    E escolho a opção "XBox" dentro de "Formulário"
+    E arrasto o Slider dentro de "Formulário" em até "98"%
+    E clico no botão "Salvar" dentro de "Formulário"
+    E valido as informações salvas: Nome:"limpou"
+    E valido as informações salvas: Console:"xone"
+    E valido as informações salvas: Slider:"98"
+    E valido as informações salvas: Switch:"On"
+    E valido as informações salvas: Checkbox:"Desabilitado"
+    E valido as informações salvas: Data:"01/01/2000"
+    E valido as informações salvas: Hora:"09:00"
 
+    
 
 
 
